@@ -35,6 +35,10 @@ jobs:
           repository: 'bnb-chain/bsc'
           token: ${{ secrets.PAT }}
           path: "bsc-docker-deploy/bsc"
+      - name: Test
+        run: |
+          ls -lah
+          pwd
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: login  
