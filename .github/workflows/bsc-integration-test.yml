@@ -63,5 +63,8 @@ jobs:
         uses: bnb-alexlucaci/go-test-docker-run-action@v3
         with:
           working_directory: ./bsc-integration-testing
+          username: bnb-alexlucaci
+          password: ${{ secrets.PAT }}
+          registry: ghcr.io
           run: |
             env VOLUME_MOUNT_PATH=${{ runner.workspace }}/bsc-integration-testing/foundation/test IMAGE_NAME=ghcr.io/bnb-chain/bsc-integration-testing:latest go test -v ./...
