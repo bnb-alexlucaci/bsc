@@ -55,6 +55,6 @@ jobs:
       - name: Go test with docker containers
         uses: bnb-alexlucaci/go-test-docker-run-action@v2
         with:
-          working-directory: ./bsc-integration-testing
+          working_directory: ./bsc-integration-testing
           run: |
             env VOLUME_MOUNT_PATH=${{ runner.workspace }}/bsc-integration-testing/foundation/test IMAGE_NAME=bnb-chain.local/bsc-integration-testing:latest go test -v ./...
